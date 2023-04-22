@@ -174,7 +174,7 @@ plt.show()
 # plotting the underlying data and the filtered data on the same plot
 
 plt.plot(df['time_converted'], df['pr'], color='green')
-plt.plot(df['time_converted'], pr_filt, color='blue')
+plt.plot(df['time_converted'], pr_filt, color='red')
 plt.xlabel('Time')
 plt.ylabel('Precipitation')
 plt.title('Precipitation Against Time')
