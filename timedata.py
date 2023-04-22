@@ -84,7 +84,7 @@ print(df)
 
 #%%
 
-plt.plot(df['time_converted'], df['pr'])
+plt.plot(df['time_converted'], df['pr'], color='green')
 plt.xlabel('Time')
 plt.ylabel('Precipitation')
 plt.title('Precipitation Against Time')
