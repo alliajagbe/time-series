@@ -127,7 +127,7 @@ plt.show()
 # the filter is a butterworth filter
 # the order of the filter is 2
 
-b, a = sig.butter(2, 0.1, btype='highpass', analog=False, output='ba')
+b, a = sig.butter(2, 0.1, btype='lowpass', analog=False, output='ba')
 
 #%%
 # using the scipy.signal.filtfilt function to apply the filter to the data
