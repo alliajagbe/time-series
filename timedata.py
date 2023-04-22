@@ -245,3 +245,20 @@ plt.xlabel('Time')
 plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
 plt.show()
+# %%
+# plotting the underlying data and the filtered and detrended data on the same plot
+
+plt.plot(df['time_converted'], pr_filt, color='green')
+plt.plot(df['time_converted'], pr_filtered_detrend, color='red')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
+
+#%%
+plt.plot(df['time_converted'], tasmax_filt, color='green')
+plt.plot(df['time_converted'], tasmax_filtered_detrend, color='red')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Time')
+plt.show()
