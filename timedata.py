@@ -104,6 +104,12 @@ plt.show()
 ft = np.fft.fft(df["pr"])
 
 df["fourier"] = ft
+#%%
+power_spectrum = np.abs(ft)**2
+plt.plot(power_spectrum)
+plt.xlabel('Frequency')
+plt.ylabel('Power Spectrum')
+plt.show()
 
 #%%
 
