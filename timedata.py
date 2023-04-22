@@ -92,7 +92,7 @@ plt.show()
 
 #%%
 
-plt.plot(df['time_converted'], df['tasmax'])
+plt.plot(df['time_converted'], df['tasmax'], color='red')
 plt.xlabel('Time')
 plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
