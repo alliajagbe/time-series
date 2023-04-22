@@ -108,6 +108,8 @@ df["fourier"] = ft
 #%%
 
 plt.plot(df['time_converted'], df['fourier'])
+plt.xlabel('Time')
+plt.ylabel('Fourier Transform')
 plt.show()
 #%%
 
