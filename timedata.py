@@ -98,6 +98,15 @@ plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
 plt.show()
 
+#%%
+# plotting monthly averages
+
+df["month"] = ''
+for i in range(len(df["time_converted"])):
+    df["month"].loc[i] = df["time_converted"].loc[i].month
+
+print(df.head(20))
+
 
 #%%
 
