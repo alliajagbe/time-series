@@ -107,7 +107,7 @@ df["fourier"] = ft
 
 #%%
 
-plt.plot(df['time_converted'], df['fourier'])
+plt.plot(df['time_converted'], df['fourier'], color='green')
 plt.xlabel('Time')
 plt.ylabel('Fourier Transform')
 plt.show()
@@ -115,33 +115,41 @@ plt.show()
 
 ftt = np.fft.fft(df["tasmax"])
 df["ftt"] = ftt
-plt.plot(df['time_converted'], df['ftt'])
+plt.plot(df['time_converted'], df['ftt'], color='red')
+plt.xlabel('Time')
+plt.ylabel('Fourier Transform')
 plt.show()
 
+#%%
+# using the scipy.signal.butter function to create a filter to get rid of the seasonal changes
+# the filter is a low pass filter
+# the cutoff frequency is 0.1
+# the filter is a butterworth filter
+# the order of the filter is 2
 
+b, a = sig.butter(2, 0.1, btype='lowpass', analog=False, output='ba')
 
+#%%
+# using the scipy.signal.filtfilt function to apply the filter to the data
+# the filter is applied twice to get rid of phase shift
 
+pr_filt = sig.filtfilt(b, a, df["pr"])
+tasmax_filt = sig.filtfilt(b, a, df["tasmax"])
 
+#%%
+# plotting the filtered data
 
+plt.plot(df['time_converted'], pr_filt, color='green')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#%%
+plt.plot(df['time_converted'], tasmax_filt, color='red')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Time')
+plt.show()
 
 
