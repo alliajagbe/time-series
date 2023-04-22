@@ -119,6 +119,7 @@ df["ftt"] = ftt
 plt.plot(df['time_converted'], df['ftt'], color='red')
 plt.xlabel('Time')
 plt.ylabel('Fourier Transform')
+plt.title('Fourier Transform of Temperature')
 plt.show()
 
 #%%
