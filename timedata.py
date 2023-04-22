@@ -181,8 +181,8 @@ plt.title('Precipitation Against Time')
 plt.show()
 
 #%%
-plt.plot(df['time_converted'], df['tasmax'], color='red')
-plt.plot(df['time_converted'], tasmax_filt, color='blue')
+plt.plot(df['time_converted'], df['tasmax'], color='blue')
+plt.plot(df['time_converted'], tasmax_filt, color='red')
 plt.xlabel('Time')
 plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
