@@ -110,13 +110,27 @@ print(df.head(20))
 #%%
 # grouping by month and taking the mean of the precipitation and temperature for each month
 
-df_monthly = df.groupby("month").mean()
+df_monthly = df.groupby("month")["pr"].mean()
+print(df_monthly)
 # plotting
+months_of_year = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 
-plt.plot(df_monthly.index, df_monthly["pr"], color='green')
+plt.plot(months_of_year, df_monthly, color='green')
 plt.xlabel('Month')
 plt.ylabel('Precipitation')
 plt.title('Precipitation Against Month')
+plt.show()
+
+#%%
+df_monthlyt = df.groupby("month")["tasmax"].mean()
+print(df_monthlyt)
+# plotting
+months_of_year = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+plt.plot(months_of_year, df_monthlyt, color='red')
+plt.xlabel('Month')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Month')
 plt.show()
 
 
