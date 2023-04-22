@@ -181,7 +181,7 @@ plt.title('Precipitation Against Time')
 plt.show()
 
 #%%
-plt.plot(df['time_converted'], df['tasmax'], color='blue')
+plt.plot(df['time_converted'], df['tasmax'], color='green')
 plt.plot(df['time_converted'], tasmax_filt, color='red')
 plt.xlabel('Time')
 plt.ylabel('Temperature')
@@ -211,3 +211,11 @@ plt.title('Temperature Against Time')
 plt.show()
 
 # %%
+# plotting the underlying data and the detrended data on the same plot
+
+plt.plot(df['time_converted'], df['pr'], color='green')
+plt.plot(df['time_converted'], pr_detrend, color='red')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
