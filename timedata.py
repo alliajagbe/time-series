@@ -229,3 +229,19 @@ plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
 plt.show()
 # %%
+pr_filtered_detrend = sig.detrend(pr_filt, type='linear')
+tasmax_filtered_detrend = sig.detrend(tasmax_filt, type='linear')
+
+#%%
+plt.plot(df['time_converted'], pr_filtered_detrend, color='green')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
+
+#%%
+plt.plot(df['time_converted'], tasmax_filtered_detrend, color='red')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Time')
+plt.show()
