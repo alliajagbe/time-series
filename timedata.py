@@ -125,10 +125,12 @@ plt.show()
 #%%
 #%%
 power_spectrum = np.abs(ft)**2
-plt.plot(power_spectrum)
+plt.plot(power_spectrum, color='green')
 plt.xlabel('Frequency')
 plt.ylabel('Power Spectrum')
+plt.title('Power Spectrum of Precipitation')
 plt.show()
+#%%
 # using the scipy.signal.butter function to create a filter to get rid of the seasonal changes
 # the filter is a low pass filter
 # the cutoff frequency is 0.1
