@@ -107,6 +107,18 @@ for i in range(len(df["time_converted"])):
 
 print(df.head(20))
 
+#%%
+# grouping by month and taking the mean of the precipitation and temperature for each month
+
+df_monthly = df.groupby("month").mean()
+# plotting
+
+plt.plot(df_monthly.index, df_monthly["pr"], color='green')
+plt.xlabel('Month')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Month')
+plt.show()
+
 
 #%%
 
