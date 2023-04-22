@@ -110,6 +110,7 @@ df["fourier"] = ft
 plt.plot(df['time_converted'], df['fourier'], color='green')
 plt.xlabel('Time')
 plt.ylabel('Fourier Transform')
+plt.title('Fourier Transform of Precipitation')
 plt.show()
 #%%
 
