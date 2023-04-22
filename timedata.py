@@ -127,7 +127,7 @@ plt.show()
 # the filter is a butterworth filter
 # the order of the filter is 2
 
-b, a = sig.butter(2, 0.1, btype='lowpass', analog=False, output='ba')
+b, a = sig.butter(2, 0.1, btype='highpass', analog=False, output='ba')
 
 #%%
 # using the scipy.signal.filtfilt function to apply the filter to the data
@@ -152,4 +152,22 @@ plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
 plt.show()
 
+#%%
+# plotting the underlying data and the filtered data on the same plot
 
+plt.plot(df['time_converted'], df['pr'], color='green')
+plt.plot(df['time_converted'], pr_filt, color='blue')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
+
+#%%
+plt.plot(df['time_converted'], df['tasmax'], color='red')
+plt.plot(df['time_converted'], tasmax_filt, color='blue')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Time')
+plt.show()
+
+# %%
