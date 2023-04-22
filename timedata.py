@@ -191,3 +191,5 @@ plt.xlabel('Time')
 plt.ylabel('Temperature')
 plt.title('Temperature Against Time')
 plt.show()
+
+# %%
