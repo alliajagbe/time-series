@@ -130,6 +130,14 @@ plt.xlabel('Frequency')
 plt.ylabel('Power Spectrum')
 plt.title('Power Spectrum of Precipitation')
 plt.show()
+
+#%%
+power_spectrumt = np.abs(ftt)**2
+plt.plot(power_spectrumt, color='red')
+plt.xlabel('Frequency')
+plt.ylabel('Power Spectrum')
+plt.title('Power Spectrum of Temperature')
+plt.show()
 #%%
 # using the scipy.signal.butter function to create a filter to get rid of the seasonal changes
 # the filter is a low pass filter
