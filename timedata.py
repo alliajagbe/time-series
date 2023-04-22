@@ -171,3 +171,23 @@ plt.title('Temperature Against Time')
 plt.show()
 
 # %%
+# removing linear trend from the data
+
+pr_detrend = sig.detrend(df["pr"])
+tasmax_detrend = sig.detrend(df["tasmax"])
+
+#%%
+# plotting the detrended data
+
+plt.plot(df['time_converted'], pr_detrend, color='green')
+plt.xlabel('Time')
+plt.ylabel('Precipitation')
+plt.title('Precipitation Against Time')
+plt.show()
+
+#%%
+plt.plot(df['time_converted'], tasmax_detrend, color='red')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Temperature Against Time')
+plt.show()
