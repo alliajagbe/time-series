@@ -6,3 +6,4 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 #%%
+import xarray as xr
